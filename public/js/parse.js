@@ -5,6 +5,9 @@
 // Douglas Crockford
 // 2010-06-26
 
+// Función que analiza el textarea, casa lo que le interesa con tokens()
+// Recorre cada uno de sus elementos aplicándole una salida
+// Para luego, en main.js transformarlo a string y añadírselo a OUTPUT.innerHTML
 var make_parse = function () {
     var scope;              // current scope
     var symbol_table = {};

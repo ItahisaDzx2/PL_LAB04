@@ -19,7 +19,7 @@ Object.constructor.prototype.error = function (message, t) {
 function main() {
     var parse = make_parse();
 
-    var source = INPUT.value;
+    var source = INPUT.value;		// Almacena lo guardado en el textarea id="INPUT"
     var string, tree;
     try {
         tree = parse(source);

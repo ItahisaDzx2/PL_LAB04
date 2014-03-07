@@ -10,7 +10,8 @@
 //      from: 	index of first character of the token
 //      to: 	index of the last character + 1
 
-// Crear función que devuelve m si al casar el lastIndex inicial coincide con el index
+// Se crea función que devuelve m si al casar el lastIndex inicial coincide con el index
+// Se utiliza cuando se crea la función tokens
 RegExp.prototype.bexec = function(str) {		
 	var i = this.lastIndex;
 	var m = this.exec(str);
@@ -18,6 +19,9 @@ RegExp.prototype.bexec = function(str) {
 	return null;
 }
 
+// Se crea una función que devuelve en JSON todo lo casado (id, num, string, 1operador, 2operador).
+// Almacenando el type, value, from, i con ayuda de la función make
+// Esta función se utiliza en parse.js
 String.prototype.tokens = function () {
     var from;                   // The index of the start of the token.
     var i = 0;                  // The index of the current character.
@@ -34,7 +38,7 @@ String.prototype.tokens = function () {
 	// Casa ===, !==, ++, +=, --, -=, ==, =<, =>, <=, <<, <>, >=, ><, >>, &&, ||
     var TWOCHAROPERATORS    = /(===|!==|[+][+=]|-[-=]|=[=<>]|[<>][=<>]|&&|[|][|])/g; 
 	// Hemos añadido: ^%.
-    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]^%.])/g; // May be some character is missing? 					  					  
+    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]^\%.])/g; // May be some character is missing? 					  					  
     var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, 
                   MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS ];
 
