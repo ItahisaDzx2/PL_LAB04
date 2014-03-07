@@ -8,59 +8,10 @@ a:visited { color: #7C6A64;}
 /*Quitar el recuadro cuando tiene el focus*/
 :focus { outline: 0px;}
 
-	/* Estilo del nombre del fichero */
-#fileINI {
-	font-size:16px;
-	font-weight:bold;
-}
-	/* Estilo para el botón de cargar fichero */
-	
-div.upload {
-    width: 157px;
-    height: 57px;
-    background: url(../images/greybutton.png);
-    overflow: hidden;
-	margin:0 auto 0 auto;
-}
-
-div.upload input {
-    display: block !important;
-    width: 157px !important;
-    height: 57px !important;
-    opacity: 0 !important;
-    overflow: hidden !important;
-}	
-	
-	/* Estilo para el Drag & Drop */
-	
-#dragDrop {
-	border: 3px dashed grey;
-	border-radius:22px;
-	width:700px;
-	height:200px;
-	padding: 5px;
-	text-align: center;
-	margin:0 auto 0 auto;
-	background-color: #FFFFFF;
-}
-
 img {
 	display:block;
 	margin:15px;
 	margin:0 auto 0 auto;
-}
-
-ul.arrow  {list-style-image: url('../images/arrow.gif');}
-
-	/* Estilo de las tablas */
-
-.hidden      { display: none; }
-.unhidden    { display: block; }
-
-
-div.unhidden {
-	overflow: auto;
-	width: 95%;
 }
 
 table {
@@ -70,89 +21,6 @@ table {
 
 table.uploadFile {width: 95%;}
 td.uploadFile {vertical-align: middle;}
-
-table.ini th {
-	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-	box-shadow: 0px 1px 0px 0px #1c1b18;
-		
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
-	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
-		
-	background-color:#eae0c2;
-		
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	border-radius:15px;
-		
-	border:3px solid #333029;
-		
-	color:#505739;
-	font-family:arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:7px 7px;
-	text-align: center;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-}
-
-table.ini td{
-	vertical-align: top;
-	text-align: left;
-	font-family:arial;
-	font-size:14px;
-	font-weight:bold;
-	padding: 10px;
-	line-height: 20px;
-		
-	background-color:#ffffff;
-		
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	border-radius:15px;
-		
-	border:2px solid #333029;
-}
-
-	/* Estilo de las listas que contiene el árbol sintáctico*/
-
-ol {margin-top: -65px;}	
-	
-ol li {
-	vertical-align: middle;
-	text-align: left;
-	font-family:arial;
-	font-size:14px;
-	font-weight:bold;
-	line-height: 20px;
-	
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	border-radius:15px;
-	margin: 10px;
-	padding: 10px;
-}
-
-ol li:hover {
-	opacity: 0.6; 
-	position: relative;
-	right: 10px;
-	transition: ease-in all 300ms;
-	-moz-transition: ease-in all 300ms;
-	-webkit-transition: ease-in all 300ms;
-}
-
-li.blanks {background-color:#FF5252;}
-li.header {background-color:#E7FC92;}
-li.nameEqualValue {background-color:#92F2FC;}
-li.comments {	background-color:#6D4F81;}
-li.error {background-color:#82C974;}
 
 	/*http://www.css3maker.com/index.html*/
 
@@ -170,10 +38,6 @@ li.error {background-color:#82C974;}
 	-moz-box-shadow:10px 10px 5px #3e332f;
 	-webkit-box-shadow:10px 10px 5px #3e332f;
 	box-shadow:10px 10px 5px #3e332f;
-}
-
-:focus { /*Quitar el recuadro cuando tiene el focus*/
-	outline:0px;
 }
 
 

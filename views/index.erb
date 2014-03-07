@@ -1,22 +1,71 @@
-  <h1>Top Down Operator Precedence. Lexical Analysis</h1>
-  <p>
-    <nav>
-      <a href="http://javascript.crockford.com/tdop/tdop.html" class="mylink">Top Down Operator Precedence tutorial</a>
-      <a href="https://github.com/crguezl/ull-etsii-grado-pl-minijavascript" class="mylink">Repo at GitHub</a>
-    </nav>
-  </p>
-  <h2>Input</h2>
-  <p>
-  Fill the input box with javascript code:
-  </p>
-  <textarea id="INPUT">
-     var a = "hello"; // initialize a
-     var b = function(x) {
-             var c = 3;
-               return x+c;
-             };
-  </textarea>
-  <br>
-  <input id="PARSE" value=parse type=button class="mylink">
-  <pre id=OUTPUT></pre>
+	<header>
+		<div id="cabecera">
+			Práctica 4: Lexical Analysis <span style="font-size:19px;color:gray"> Asignatura:</span> Procesadores de Lenguajes<br>
+			<span style="font-size:22px; color:#553529">Profesor: Casiano Rodríguez León</span>
+		</div>
+		<div id="negro">
+			<div id="volver">
+				<a href="http://mdbgalvan.github.io/" target="_blank">alu3299</a> /
+				<a href="http://itahisadzx2.github.io/" target="_blank">alu4061</a>
+			</div>	
+		</div>
+	</header>
+
+		<p>
+			<nav>
+				<a href="http://javascript.crockford.com/tdop/tdop.html" class="mylink">Top Down Operator Precedence tutorial</a>
+				<a href="https://github.com/ItahisaDzx2/PL_LAB04/tree/master" class="mylink">Repo at GitHub</a>
+			</nav>
+		</p>
+
+	<section>
+
+		<div id="titulillo">
+			Top Down Operator Precedence. Lexical Analysis
+		</div>
+
+		<table class="uploadFile">
+			<tr>
+				<td>
+					<p><b>Fichero INI descargables:</b></p>
+					<nav>
+						<button type="button" onclick="dump('assignment.txt');">input.ini</button>
+						<button type="button" onclick="dump('expression.txt');">input2.ini</button>
+						<button type="button" onclick="dump('input3.txt');">input3.ini</button>
+					</nav>
+				</td>
+			</tr>
+		</table>
+
+		<div id="titulo_peque">
+			Input
+		</div>
+
+		<p>
+			Fill the input box with javascript code:
+		</p>
+		<textarea rows="7" autofocus id="INPUT">
+var a = "hello"; // initialize a
+var b = function(x) {
+	var c = 3;
+	return x+c;
+};
+		</textarea>
+		<br><br>
+		<input id="PARSE" value=parse type=button class="mylink">
+		<pre id=OUTPUT></pre>
+	  
+	</section>
+	
+	<footer>
+		<div id="vacio_arriba"></div>
+		<div id="final_arriba">
+			Volver a la Página Principal de <a href="http://mdbgalvan.github.io/" target="_blank">María</a>
+			o de <a href="http://itahisadzx2.github.io/" target="_blank">Itahisa</a>
+		</div>
+		<div id="final_abajo">
+			Realizado por: Itahisa M. Díaz Díaz y María D. Batista Galván
+		</div>
+		<div id="vacio_abajo"></div>	
+	</footer>
 
