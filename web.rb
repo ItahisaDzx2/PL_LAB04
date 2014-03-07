@@ -1,0 +1,7 @@
+require 'sinatra'
+
+get '/' do
+  "Hello, world" #erb :index 
+end
+
+__END__
