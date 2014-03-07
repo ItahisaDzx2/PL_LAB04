@@ -6,7 +6,7 @@ suite('PRUEBAS PARA BEXEC', function() {
 		var re = /d(b+)(d)/ig;
 	});
 	test('NULL', function() {
-		regexp.lastIndex = 3;
+		re.lastIndex = 3;
 		assert.equal(re.bexec(str), null);
     });	
 });

@@ -19,4 +19,55 @@
 			mocha.run();
 		</script>
 		
+		<!-- Voy a utilizar esto para los tests -->
+		
+		<table class="uploadFile">
+			<tr>
+				<td>
+					<p>Seleccione uno de los ficheros siguientes: </p>
+					<nav>
+						<button id="file" type="button" onclick="dump_get('assignment.txt');">input.txt</button>
+						<button id="file" type="button" onclick="dump_get('expression.txt');" >input2.txt</button>
+						<button id="file" type="button" onclick="dump_get('input3.txt');" >input3.txt</button>
+					</nav>
+				</td>
+				<td>
+					<textarea rows="7" autofocus id="INPUT">
+var a = "hello"; // initialize a
+var b = function(x) {
+	var c = 3;
+	return x+c;
+};
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input id="PARSE" value=parse type=button class="myButton">
+				</td>
+			</tr>
+		</table>
+		
+		<div id="out" class="hidden">
+			<table class="ini">
+				<thead>
+					<tr>
+						<th>Original</th>
+						<th>Tokens</th>
+					</tr>
+				</thead>
+				<tbody class="scrollContent">
+					<tr>
+						<td>
+						  <pre id="INIPUT"></pre>
+						</td>
+						<td>
+						  <pre id=OUTPUT></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>	
+		
 
