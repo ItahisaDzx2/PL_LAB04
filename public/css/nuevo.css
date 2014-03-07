@@ -188,11 +188,11 @@ section a:hover {
 #titulillo {
     font-family: pakenham;
     font-size: 27px;
-    width: 550px;
+	text-align: center;
+	color: white;
     border: 0px;
     border-radius: 8px 8px 8px 8px;
     background-color: #363942;
-    color: white;
     padding: 2px 0px 6px 15px;
     margin-top: 40px;
     margin-bottom: 23px;
