@@ -38,7 +38,7 @@ String.prototype.tokens = function () {
 	// Casa ===, !==, ++, +=, --, -=, ==, =<, =>, <=, <<, <>, >=, ><, >>, &&, ||
     var TWOCHAROPERATORS    = /(===|!==|[+][+=]|-[-=]|=[=<>]|[<>][=<>]|&&|[|][|])/g; 
 	// Hemos añadido: ^%.
-    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]^\%.])/g; // May be some character is missing? 					  					  
+    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]\^%.])/g; // May be some character is missing? 					  			  
     var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, 
                   MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS ];
 
