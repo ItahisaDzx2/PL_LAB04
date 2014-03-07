@@ -1,21 +1,21 @@
 "use strict";
 // tokens.js
-// 2010-02-23
+// created:		2010-02-23
+// modified: 	2014-03-2014
 
 // Produce an array of simple token objects from a string.
 // A simple token object contains these members:
-//      type: 'name', 'string', 'number', 'operator'
-//      value: string or number value of the token
-//      from: index of first character of the token
-//      to: index of the last character + 1
+//      type: 	'name', 'string', 'number', 'operator'
+//      value: 	string or number value of the token
+//      from: 	index of first character of the token
+//      to: 	index of the last character + 1
 
-// Comments are ignored.
-
-RegExp.prototype.bexec = function(str) {
-  var i = this.lastIndex;
-  var m = this.exec(str);
-  if (m && m.index == i) return m;
-  return null;
+// Crear función que devuelve m si al casar el lastIndex inicial coincide con el index
+RegExp.prototype.bexec = function(str) {		
+	var i = this.lastIndex;
+	var m = this.exec(str);
+	if (m && m.index == i) return m;
+	return null;
 }
 
 String.prototype.tokens = function () {
@@ -25,17 +25,18 @@ String.prototype.tokens = function () {
     var m;                      // Matching
     var result = [];            // An array to hold the results.
 
-    var WHITES              = /\s+/g;
-    var ID                  = /[a-zA-Z_]\w*/g;
-    var NUM                 = /\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g;
-    var STRING              = /('(\\.|[^'])*'|"(\\.|[^"])*")/g;
-    var ONELINECOMMENT      = /\/\/.*/g;
-    var MULTIPLELINECOMMENT = /\/[*](.|\n)*?[*]\//g;
-    var TWOCHAROPERATORS    = /(===|!==|[+][+=]|-[-=]|=[=<>]|[<>][=<>]|&&|[|][|])/g;
-    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]])/g; // May be some character is missing?
+    var WHITES              = /\s+/g;				// Casa con Carácter individual en espacio en blanco
+    var ID                  = /[a-z_]\w*/gi;		// Casa con una palabra que contiene letras o dígitos y empieza con letras o _
+    var NUM                 = /\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g; // Casa con dígitos con coma flotante
+    var STRING              = /('(\\.|[^'])*'|"(\\.|[^"])*")/g;	 // Casa con palabras entre "" ó '', y escapa \", \'
+    var ONELINECOMMENT      = /\/\/.*/g;			// Casa con // comentario
+    var MULTIPLELINECOMMENT = /\/[*](.|\n)*?[*]\//g;// Casa con /* comentario con multilínea */
+	// Casa ===, !==, ++, +=, --, -=, ==, =<, =>, <=, <<, <>, >=, ><, >>, &&, ||
+    var TWOCHAROPERATORS    = /(===|!==|[+][+=]|-[-=]|=[=<>]|[<>][=<>]|&&|[|][|])/g; 
+	// Hemos añadido: ^%.
+    var ONECHAROPERATORS    = /([-+*\/=()&|;:,<>{}[\]^%.])/g; // May be some character is missing? 					  					  
     var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, 
                   MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS ];
-
 
     // Make a token object.
     var make = function (type, value) {
@@ -47,6 +48,8 @@ String.prototype.tokens = function () {
         };
     };
 
+	// El i = index of the current character, por lo que, al sumarle la longitud de la cadena casada se situa
+	// en la cadena original al final de la subcadena casada. Sirve para avanzar en la cadena
     var getTok = function() {
       var str = m[0];
       i += str.length; // Warning! side effect on i
@@ -57,13 +60,14 @@ String.prototype.tokens = function () {
     if (!this) return; 
 
     // Loop through this text
-    while (i < this.length) {
+    while (i < this.length) {			// Recorre hasta al final de la cadena moviendo el index = i
         tokens.forEach( function(t) { t.lastIndex = i;}); // Only ECMAScript5
         from = i;
+		// Entra en la condición en la que el index sea igual al LastIndex
         // Ignore whitespace and comments
-        if (m = WHITES.bexec(this) || 
+        if (m = WHITES.bexec(this) || 								
            (m = ONELINECOMMENT.bexec(this))  || 
-           (m = MULTIPLELINECOMMENT.bexec(this))) { getTok(); }
+           (m = MULTIPLELINECOMMENT.bexec(this))) { getTok(); }	// Sólo avanza en la cadena con getTok()
         // name.
         else if (m = ID.bexec(this)) {
             result.push(make('name', getTok()));
