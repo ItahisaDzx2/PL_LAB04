@@ -1,4 +1,4 @@
-	function  dump_ajax(fileName) {
+	function dump_ajax(fileName) {
 		$.ajax({
 			url : fileName,
             dataType: "text",
