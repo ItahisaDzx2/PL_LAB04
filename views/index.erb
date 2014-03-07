@@ -52,7 +52,27 @@ var b = function(x) {
 		</textarea>
 		<br><br>
 		<input id="PARSE" value=parse type=button class="myButton">
-		<pre id=OUTPUT></pre>
+		<div id="out" class="hidden">
+			<table class="ini">
+				<thead>
+					<tr>
+						<th>Original</th>
+						<th>Tokens</th>
+					</tr>
+				</thead>
+				<tbody class="scrollContent">
+					<tr>
+						<td>
+						  <pre id="INIPUT"></pre>
+						</td>
+						<td>
+						  <pre id=OUTPUT></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
 	  
 	</section>
 	
@@ -67,4 +87,3 @@ var b = function(x) {
 		</div>
 		<div id="vacio_abajo"></div>	
 	</footer>
-

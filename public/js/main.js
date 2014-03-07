@@ -17,6 +17,9 @@ Object.constructor.prototype.error = function (message, t) {
 };
 
 function main() {
+	out.className = 'unhidden';
+	$("#INIPUT").html($("#INPUT").val());
+	
     var parse = make_parse();
 
     var source = INPUT.value;		// Almacena lo guardado en el textarea id="INPUT"
