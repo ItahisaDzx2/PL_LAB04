@@ -197,19 +197,7 @@ section a:hover {
     margin-top: 40px;
     margin-bottom: 23px;
 }
-#titulo_peque {
-    width: 490px;
-    font-family: font1_negrita;
-    font-size: 20px;
-    font-weight: bold;
-    color: #7F785F;
-    margin-bottom: 15px;
-    background-color: #D9D2BC;
-    border-radius: 8px;
-    padding: 4px 0px 5px 35px;
-    margin-top: 40px;
-    margin-bottom: 18px;
-    border: 1px solid #ACA488;
+
 }
 #codigo {
     width: 800px;
