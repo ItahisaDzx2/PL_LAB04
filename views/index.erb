@@ -22,6 +22,10 @@
 		<div id="titulillo">
 			Top Down Operator Precedence. Lexical Analysis
 		</div>
+		
+		<div id="titulo_peque">
+			Input
+		</div>
 
 		<table class="uploadFile">
 			<tr>
@@ -33,25 +37,24 @@
 						<button id="file" type="button" onclick="dump('input3.txt');" >input3.txt</button>
 					</nav>
 				</td>
-			</tr>
-		</table>
-
-		<div id="titulo_peque">
-			Input
-		</div>
-
-		<p>
-			Fill the input box with javascript code:
-		</p>
-		<textarea rows="7" autofocus id="INPUT">
+				<td>
+					<textarea rows="7" autofocus id="INPUT">
 var a = "hello"; // initialize a
 var b = function(x) {
 	var c = 3;
 	return x+c;
 };
-		</textarea>
-		<br><br>
-		<input id="PARSE" value=parse type=button class="myButton">
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input id="PARSE" value=parse type=button class="myButton">
+				</td>
+			</tr>
+		</table>
+		
 		<div id="out" class="hidden">
 			<table class="ini">
 				<thead>
@@ -71,8 +74,7 @@ var b = function(x) {
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		
+		</div>		
 	  
 	</section>
 	
