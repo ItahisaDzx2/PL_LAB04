@@ -9,25 +9,27 @@ La aplicación fue propuesta para ser desarrolla en la asignatura **Procesadores
 
 # Funcionamiento
 
-Para hacer uso de la aplicación, sólo hay que seguir una serie de sencillos pasos:
+Puede probar en [Heroku](http://pl-lab04.herokuapp.com/), el funcionamiento del analizador.
 
-1. [Pulse aquí para abrir la página](https://.com/)
-2. b
-3. c
+Una vez allí, seleccione entre los ficheros inputs disponibles (que contienen ejemplos de código en javascript) o edite/escriba código en javascript en el área de texto. Luego, pulsando sobre parse aparecerá el código parseado.
 
 # Desarrollo
 
+Los lenguajes y herramientas (frameworks, librerías, etc.) utilizados para el desarrollo del presente proyecto fueron:
+
 * Ruby gems
-* Heroku
 * Sinatra
-
-# Dependencias
-
+* Heroku
+* HTML/CSS/Javascript
 * JQuery
 
 # Tests
 
-Describir y mostrar cómo ejecutar las pruebas con ejemplos de código. [Pulse aquí ejecutar las pruebas](https://.com/)
+Entorno de pruebas basado en Mocha y Chai. 
+
+Pueden ejecutarse las pruebas [aquí](http://pl-lab04.herokuapp.com/tests).
+
+
 
 
 # Colaboradores
