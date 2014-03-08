@@ -21,7 +21,7 @@ suite('PRUEBAS PARA BEXEC', function() {
 		var str = "dBdXXXXDBBD";
 		var re = /d(b+)(d)/ig;
 		re.lastIndex = 7;
-		assert.equal(re.bexec(str), [ 'DBBD', 'BB', 'D' ]);
+		assert.equal(re.bexec(str), [ 'DBBD', 'BB', 'D', index: 7, input: 'dBdXXXXDBBD' ]);
     });	
 });
 
