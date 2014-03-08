@@ -11,7 +11,7 @@ La aplicación fue propuesta para ser desarrolla en la asignatura **Procesadores
 
 Puede probar en [Heroku](http://pl-lab04.herokuapp.com/), el funcionamiento del analizador.
 
-Una vez allí, seleccione entre los ficheros inputs disponibles (que contienen ejemplos de código en javascript) o edite/escriba código en javascript en el área de texto. Luego, pulsando sobre parse aparecerá el código parseado.
+Una vez allí, seleccione entre los ficheros inputs disponibles (que contienen ejemplos de código en javascript) o edite/escriba código javascript en el área de texto. Pulsando sobre "analizar" aparecerá el código parseado.
 
 # Desarrollo
 
@@ -25,12 +25,9 @@ Los lenguajes y herramientas (frameworks, librerías, etc.) utilizados para el d
 
 # Tests
 
-Entorno de pruebas basado en Mocha y Chai. 
-
+Entorno de pruebas basado en Mocha y Chai.
 Pueden ejecutarse las pruebas [aquí](http://pl-lab04.herokuapp.com/tests).
-
-
-
+Se testean el LocalStorage, las funciones bexec, dump_get, dump_ajax, main, y main parse, incluyendo algunos errores.
 
 # Colaboradores
 
@@ -42,5 +39,5 @@ Pueden ejecutarse las pruebas [aquí](http://pl-lab04.herokuapp.com/tests).
 
 # Licencia
 
-Licencia BSD
+Licencia BSD.
 
