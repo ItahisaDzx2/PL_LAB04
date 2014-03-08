@@ -27,28 +27,30 @@
 		<h1>Práctica 4: Lexical Analysis</h1>
 		<table class="uploadFile">
 			<tr>
+				<td></td>
+				<td>También puede escribir su código en el área de texto:</td>
+			</tr>
+			<tr>
 				<td>
-					<p>Seleccione uno de los ficheros siguientes: </p>
+					<p>Seleccione uno de los ficheros siguientes o cargue uno: </p>
 					<nav>
-						<button id="file" type="button" onclick="dump_get('assignment.txt');">input.txt</button>
-						<button id="file" type="button" onclick="dump_get('expression.txt');" >input2.txt</button>
-						<button id="file" type="button" onclick="dump_get('input3.txt');" >input3.txt</button>
+						<button id="file" type="button" onclick="dump_get('assignment.txt');">input.txt <span id="getAjax">GET</span></button>
+						<button id="file" type="button" onclick="dump_get('expression.txt');" >input2.txt <span id="getAjax">GET</span></button></button>
+						<button id="file" type="button" onclick="dump_ajax('input3.txt');" >input3.txt <span id="getAjax">AJAX</span></button>	
+						<button id="file" type="button" onclick="dump_ajax('input4.txt');" >input4.txt <span id="getAjax">AJAX</span></button>
+						<input type="file" id="fileinput" name="upload" />
 					</nav>
 				</td>
 				<td>
 					<textarea rows="7" autofocus id="INPUT">
-var a = "hello"; // initialize a
-var b = function(x) {
-	var c = 3;
-	return x+c;
-};
+
 					</textarea>
 				</td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>
-					<input id="PARSE" value=parse type=button class="myButton">
+					<input id="PARSE" value=Analizar type=button class="myButton">
 				</td>
 			</tr>
 		</table>
@@ -72,6 +74,10 @@ var b = function(x) {
 					</tr>
 				</tbody>
 			</table>
-		</div>	
+		</div>
+		<script src="js/jquery.stickytableheaders.js"></script>
+		<script>
+			$("table.ini").stickyTableHeaders();
+		</script>	
 		
 
