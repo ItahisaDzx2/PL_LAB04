@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Práctica 4: Analizador Léxico</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="images/logo.png">
+	<!-- JAVASCRIPT -->
+	<script src="../js/parse.js"></script>
+	<script src="../js/tokens.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/load.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="mocha.css" />
+	<link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+		<div id="mocha"></div>
+		
+		<script src="chai.js"></script>
+		<script src="mocha.js"></script>
+		
+		<script>mocha.setup('tdd')</script>
+		<script src="tests.js"></script>
+		
+		<script>
+			mocha.run();
+		</script>
+		
+		<!-- Voy a utilizar esto para los tests -->
+		
+		<br><br><br><br>
+		
+		<h1>Práctica 4: Lexical Analysis</h1>
+		<table class="uploadFile">
+			<tr>
+				<td></td>
+				<td>También puede escribir su código en el área de texto:</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Seleccione uno de los ficheros siguientes o cargue uno: </p>
+					<nav>
+						<button id="file" type="button" onclick="dump_get('assignment.txt');">input.txt <span id="getAjax">GET</span></button>
+						<button id="file" type="button" onclick="dump_get('expression.txt');" >input2.txt <span id="getAjax">GET</span></button></button>
+						<button id="file" type="button" onclick="dump_ajax('input3.txt');" >input3.txt <span id="getAjax">AJAX</span></button>	
+						<button id="file" type="button" onclick="dump_ajax('input4.txt');" >input4.txt <span id="getAjax">AJAX</span></button>
+						<input type="file" id="fileinput" name="upload" />
+					</nav>
+				</td>
+				<td>
+					<textarea rows="7" autofocus id="INPUT">
+
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input id="PARSE" value=Analizar type=button class="myButton">
+				</td>
+			</tr>
+		</table>
+		
+		<div id="out" class="hidden">
+			<table class="ini">
+				<thead>
+					<tr>
+						<th>Original</th>
+						<th>Tokens</th>
+					</tr>
+				</thead>
+				<tbody class="scrollContent">
+					<tr>
+						<td>
+						  <pre id="INIPUT"></pre>
+						</td>
+						<td>
+						  <pre id=OUTPUT></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="../js/jquery.stickytableheaders.js"></script>
+		<script>
+			$("table.ini").stickyTableHeaders();
+		</script>	
+</body>
+</html>		
+

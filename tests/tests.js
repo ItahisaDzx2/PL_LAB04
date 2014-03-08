@@ -7,7 +7,6 @@ suite('PRUEBAS PARA EL LOCALSTORAGE', function() {
 			assert.deepEqual(localStorage.INPUT, 'var a = "hello"; // initialize a\nvar b = function(x) {\n	var c = 3;\n	return x+c;\n};');
 		}
 	});
-	
 });
 
 suite('PRUEBAS PARA BEXEC()', function() {
@@ -60,27 +59,38 @@ suite('PRUEBAS PARA LA MAIN()', function() {
 suite('PRUEBAS PARA LA MAIN() y MAKE_PARSE()', function() {
 	test('Asignación', function() {
 		var parse = make_parse();
-		var source = 'var a = 3;';
+		var source = 'var a = "2";';
 		var string, tree;
 		try {
 			tree = parse(source);
-			//string = JSON.stringify(tree, ['type', 'value', 'from', 'to'],  4);
 			string = JSON.stringify(tree, ['key', 'name', 'message',
 				 'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
 		} catch (e) {
 			string = JSON.stringify(e, ['name', 'message', 'from', 'to', 'key',
 					'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
 		};
-		assert.equal(string,'{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": 3,\n        "arity": "literal"\n    }\n}');
-		assert.equal(OUTPUT.innerHTML, string.replace(/&/g, '&amp;').replace(/[<]/g, '&lt;'));
+		assert.equal(string,'{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": "2",\n        "arity": "literal"\n    }\n}');
     });
-		test('Comentario', function() {
+	test('Operador !==', function() {
+		var parse = make_parse();
+		var source = 'if (3 !== 4){}';
+		var string, tree;
+		try {
+			tree = parse(source);
+			string = JSON.stringify(tree, ['key', 'name', 'message',
+				 'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
+		} catch (e) {
+			string = JSON.stringify(e, ['name', 'message', 'from', 'to', 'key',
+					'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
+		};
+		assert.equal(string,'{\n    "value": "if",\n    "arity": "statement",\n    "first": {\n        "value": "!==",\n        "arity": "binary",\n        "first": {\n            "value": 3,\n            "arity": "literal"\n        },\n        "second": {\n            "value": 4,\n            "arity": "literal"\n        }\n    },\n    "second": null,\n    "third": null\n}');
+    });
+	test('Comentario', function() {
 		var parse = make_parse();
 		var source = '/* Comentario */';
 		var string, tree;
 		try {
 			tree = parse(source);
-			//string = JSON.stringify(tree, ['type', 'value', 'from', 'to'],  4);
 			string = JSON.stringify(tree, ['key', 'name', 'message',
 				 'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
 		} catch (e) {
