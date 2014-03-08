@@ -28,6 +28,7 @@
 			var r = new FileReader();
 			r.onload = function(e) { 
 				$("#INPUT").val(e.target.result);
+				if (window.localStorage) {localStorage.INPUT = e.target.result;}
 			}
 			r.readAsText(f);
 		} else { 

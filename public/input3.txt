@@ -1,6 +1,5 @@
-Object.constructor.prototype.error = function (message, t) {
-    t = t || this;
-    t.name = "SyntaxError";
-    t.message = message;
-    throw t;
-};
+var x = 2;
+
+if (x >= 3) {
+	return x + 3;
+}
