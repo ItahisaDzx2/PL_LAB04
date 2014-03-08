@@ -15,3 +15,22 @@
 			if (window.localStorage) {localStorage.INPUT = data;}
 		});
 	};
+	
+	$(document).ready(function() {
+		$("#fileinput").change(calculate);
+	});
+	
+	function calculate(evt) {
+		
+		var f = evt.target.files[0]; 
+
+		if (f) {
+			var r = new FileReader();
+			r.onload = function(e) { 
+				$("#INPUT").val(e.target.result);
+			}
+			r.readAsText(f);
+		} else { 
+			alert("Failed to load file");
+		}
+	}

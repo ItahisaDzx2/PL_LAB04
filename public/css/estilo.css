@@ -127,7 +127,7 @@ a:hover{
 	height: 50px;
 	padding: 5px;
 	text-align: center;
-	margin: 5px;
+	margin: 5px 0px 15px 15px;
 	background-color: #E0E0E0;
 }
 #file:hover {
