@@ -64,12 +64,12 @@ td.uploadFile {vertical-align: top;}
 	border:2px solid #d02718;
 	display:inline-block;
 	width: 630px;
+	font-size: 20px;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:arial;
-	font-size:14px;
 	font-weight:bold;
-	padding:12px 16px;
+	padding:5px 16px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
@@ -111,7 +111,6 @@ td.uploadFile {vertical-align: top;}
 a{
 	color:#c00;
 	text-decoration:none;
-	font-weight:bold;
 }
 a:hover{
 	text-decoration:underline;
@@ -145,6 +144,11 @@ a:hover{
 /* ESTILO DE LA SALIDA DE LOS DATOS*/
 .hidden      { display: none; }
 .unhidden    { display: block; }
+
+div.unhidden {
+	overflow: auto;
+	width: 95%;
+}
 
 table {
 	border-collapse: separate;
