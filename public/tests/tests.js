@@ -4,7 +4,7 @@ suite('PRUEBAS PARA EL LOCALSTORAGE', function() {
 	test('Soporta localStorage', function() {
 		if (window.localStorage) {
 			localStorage.INPUT = 'var a = "hello"; // initialize a\nvar b = function(x) {\n	var c = 3;\n	return x+c;\n};';
-			assert.deepEqual(localStorage.finaloutput, 'var a = "hello"; // initialize a\nvar b = function(x) {\n	var c = 3;\n	return x+c;\n};');
+			assert.deepEqual(localStorage.INPUT, 'var a = "hello"; // initialize a\nvar b = function(x) {\n	var c = 3;\n	return x+c;\n};');
 		}
 	});
 	
@@ -21,7 +21,7 @@ suite('PRUEBAS PARA BEXEC', function() {
 		var str = "dBdXXXXDBBD";
 		var re = /d(b+)(d)/ig;
 		re.lastIndex = 7;
-		assert.equal(re.bexec(str), [ Array(3) ]);
+		assert.equal(re.bexec(str), [ 'DBBD', 'BB', 'D' ]);
     });	
 });
 
@@ -31,7 +31,7 @@ suite('PRUEBAS PARA DUMP GET Y AJAX', function() {
 		assert.isString($("#INPUT").val());
     });	
 	test('AJAX', function() {
-		dump_ajax(expression);
+		dump_ajax('expression.txt');
 		assert.isString($("#INPUT").val());
     });	
 });
