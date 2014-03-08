@@ -10,7 +10,7 @@ suite('PRUEBAS PARA EL LOCALSTORAGE', function() {
 	
 });
 
-suite('PRUEBAS PARA BEXEC', function() {
+suite('PRUEBAS PARA BEXEC()', function() {
 	test('NULL', function() {
 		var str = "dBdXXXXDBBD";
 		var re = /d(b+)(d)/ig;
@@ -19,7 +19,7 @@ suite('PRUEBAS PARA BEXEC', function() {
     });	
 });
 
-suite('PRUEBAS PARA DUMP GET Y AJAX', function() {
+suite('PRUEBAS PARA DUMP_GET() Y DUMP_AJAX()', function() {
 	test('GET', function() {
 		dump_get('assignment.txt');
 		assert.isString($("#INPUT").val());
@@ -44,15 +44,20 @@ suite('PRUEBAS PARA COMPROBAR ERRORES', function() {
 	});
 });
 
-suite('PRUEBAS PARA LA SALIDA', function() {
+suite('PRUEBAS PARA LA MAIN()', function() {
 	test('Asignación', function() {
 		INPUT.value = 'var a = 3;';
         main();
 		assert.equal(OUTPUT.innerHTML,'{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": 3,\n        "arity": "literal"\n    }\n}');
     });	
+	test('Comentario', function() {
+		INPUT.value = '// Comentario';
+        main();
+		assert.equal(OUTPUT.innerHTML,'null');
+    });	
 });
 
-suite('PRUEBAS PARA LA make_parse', function() {
+suite('PRUEBAS PARA LA MAIN() y MAKE_PARSE()', function() {
 	test('Asignación', function() {
 		var parse = make_parse();
 		var source = 'var a = 3;';
@@ -67,6 +72,22 @@ suite('PRUEBAS PARA LA make_parse', function() {
 					'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
 		};
 		assert.equal(string,'{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": 3,\n        "arity": "literal"\n    }\n}');
+		assert.equal(OUTPUT.innerHTML, string.replace(/&/g, '&amp;').replace(/[<]/g, '&lt;'));
+    });
+		test('Comentario', function() {
+		var parse = make_parse();
+		var source = '/* Comentario */';
+		var string, tree;
+		try {
+			tree = parse(source);
+			//string = JSON.stringify(tree, ['type', 'value', 'from', 'to'],  4);
+			string = JSON.stringify(tree, ['key', 'name', 'message',
+				 'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
+		} catch (e) {
+			string = JSON.stringify(e, ['name', 'message', 'from', 'to', 'key',
+					'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
+		};
+		assert.equal(string, 'null');
 		assert.equal(OUTPUT.innerHTML, string.replace(/&/g, '&amp;').replace(/[<]/g, '&lt;'));
     });	
 });
