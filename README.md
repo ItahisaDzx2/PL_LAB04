@@ -13,6 +13,8 @@ Puede probar en [Heroku](http://pl-lab04.herokuapp.com/), el funcionamiento del 
 
 Una vez allí, seleccione entre los ficheros inputs disponibles (que contienen ejemplos de código en javascript) o edite/escriba código javascript en el área de texto. Pulsando sobre "analizar" aparecerá el código parseado.
 
+Nota: en los ficheros inputs pueden observarse las palabras AJAX y GET; éstas señalan el método de carga utilizado.
+
 # Desarrollo
 
 Los lenguajes y herramientas (frameworks, librerías, etc.) utilizados para el desarrollo del presente proyecto fueron:
