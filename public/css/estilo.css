@@ -46,53 +46,49 @@ td.uploadFile {vertical-align: top;}
 
 	/*http://www.bestcssbuttongenerator.com/*/
     
-    .myButton {
-	
-		-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-		-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-		box-shadow: 0px 1px 0px 0px #1c1b18;
-		
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
-		background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-		background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-		background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-		background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-		background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
-		
-		background-color:#eae0c2;
-		
-		-moz-border-radius:15px;
-		-webkit-border-radius:15px;
-		border-radius:15px;
-		
-		border:3px solid #333029;
-		
-		display:inline-block;
-		cursor:pointer;
-		color:#505739;
-		font-family:arial;
-		font-size:14px;
-		font-weight:bold;
-		padding:7px 86px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #ffffff;
-	}
-	.myButton:hover {
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
-		background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-		background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-		background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-		background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-		background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
-		background-color:#ccc2a6;
-	}
-	.myButton:active {
-		position:relative;
-		top:1px;
-	}
-	
+.myButton {
+	-moz-box-shadow: 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow: 0px 1px 0px 0px #f5978e;
+	box-shadow: 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24537;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:2px solid #d02718;
+	display:inline-block;
+	width: 630px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+	background-color:#c62d1f;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
 /* ESTILO PARA LA BARRA DEL MENÚ PRINCIPAL*/
 	
 .nav{
@@ -124,17 +120,26 @@ a:hover{
 /* ESTILO PARA LA PRESENTACIÓN DE LOS FICHEROS */
 
 #file {
-	border: 2px dashed #9E2EBF;
-	color: #9E2EBF;
+	border: 3px dashed #363942;
+	color: #363942;
+	font-size: 16px;
+	cursor:pointer;
 	width: 100px;
 	height: 50px;
 	padding: 5px;
 	text-align: center;
-	margin: 0 auto 0 auto;
+	margin: 5px;
 	background-color: #E0E0E0;
 }
 #file:hover {
 	background-color: #8A8A8A;
+	color: white;
+	opacity: 0.8; 
+	position: relative;
+	top: 10px;
+	transition: ease-in all 300ms;
+	-moz-transition: ease-in all 300ms;
+	-webkit-transition: ease-in all 300ms;
 }
 
 /* ESTILO DE LA SALIDA DE LOS DATOS*/
@@ -147,34 +152,16 @@ table {
 }
 
 table.ini th {
-	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-	box-shadow: 0px 1px 0px 0px #1c1b18;
-		
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
-	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
-		
-	background-color:#eae0c2;
-		
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	border-radius:15px;
-		
-	border:3px solid #333029;
-		
-	color:#505739;
-	font-family:arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:7px 7px;
+	font-family: pakenham;
+    font-size: 20px;
 	text-align: center;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+	color: white;
+    border: 0px;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #363942;
+    padding: 2px 0px 6px 15px;
+    margin-top: 40px;
+    margin-bottom: 23px;
 }
 
 table.ini td{
