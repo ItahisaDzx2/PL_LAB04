@@ -74,7 +74,7 @@ suite('PRUEBAS PARA LA MAIN() y MAKE_PARSE()', function() {
 		assert.equal(string,'{\n    "value": "=",\n    "arity": "binary",\n    "first": {\n        "value": "a",\n        "arity": "name"\n    },\n    "second": {\n        "value": 3,\n        "arity": "literal"\n    }\n}');
 		assert.equal(OUTPUT.innerHTML, string.replace(/&/g, '&amp;').replace(/[<]/g, '&lt;'));
     });
-		test('Comentario', function() {
+	test('Comentario', function() {
 		var parse = make_parse();
 		var source = '/* Comentario */';
 		var string, tree;
